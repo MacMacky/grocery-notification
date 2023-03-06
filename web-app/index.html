@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.umd.min.js"></script>
+  <title>Grocery Notification</title>
+</head>
+<body>
+    <div class="container">
+      <div class="input">
+        <input name="Enter new item" id="grocery-input"  placeholder="Enter new grocery item" />
+        <i class="uil uil-notes notes-icon"></i>
+      </div>
+
+      <div class="datepicker-container">
+        <input id="datepicker" placeholder="Schedule Grocery Date" type="text"/>
+      </div>
+      
+      <h1 class="title">Grocery Items</h1>
+      <ul class="grocery-list">
+        <li class="grocery-list-item" >
+          <span class="grocery-item">Eggs</span>
+          <i class="uil uil-trash delete-icon"></i>
+        </li>
+      </ul>
+
+      <button class="submit" type="button">Schedule</button>
+    </div>
+    <div class="error notification"></div>
+    <div class="success notification"></div>
+    <script src="./script.js"></script>
+</body>
+</html>

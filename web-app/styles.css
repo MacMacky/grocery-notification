@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,300&family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eee;
+  height: 100vh;
+  padding: 0;
+
+}
+
+.container {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  padding: 30px;
+  margin: 85px auto;
+  border-radius: 6px;
+}
+
+.container .input {
+  position: relative;
+  height: 70px;
+  width: 100%
+}
+
+.container .datepicker-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container input#datepicker {
+  padding: 8px;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid #cecece;
+}
+
+input#grocery-input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border-radius: 6px;
+  padding: 25px 18px 18px 18px;
+  font-size: 16px;
+  font-weight: 400;
+  resize: none;
+}
+
+.notes-icon {
+  position: absolute;
+  top: 50%;
+  font-size: 15px;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #828282;
+}
+
+.title {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.grocery-list {
+  margin-top: 30px;
+}
+
+.grocery-list .grocery-list-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #eee;
+  padding: 15px;
+  border-radius: 6px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.grocery-list .grocery-item {
+  margin-left: 15px;
+}
+
+.grocery-list .delete-icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+button.submit {
+  margin-top: 40px;
+  padding: 12px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  width: 100%;
+  background-color: #0081C9;
+  color: white;
+  cursor: pointer;
+}
+
+.notification {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 250px;
+  height: auto;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.error {
+  background-color: #FF5733;
+}
+
+.success {
+  background-color: #0BDA51;
+}
+
+.notification.show {
+  opacity: 1;
+  -webkit-animation: fadein 0.5s, fadeout .5s 1.5s;
+  animation: fadein 0.5s, fadeout .5s 1.5s;
+}
+
+@keyframes fadein {
+  from {top: 0; opacity: 0;}
+  to {top: 5%; opacity: 1; }
+}
+
+@keyframes fadeout {
+  from {top: 5%; opacity: 1;}
+  to {top: 0; opacity: 0;}
+}
